@@ -1,0 +1,16 @@
+.main {
+    height: 100%;
+    margin: 0;
+  }
+.cards{
+    margin-top: 15%;
+    margin-left: 25%;
+    width: 50%;
+    height: 2%;
+  }
+.span-container {
+    position: absolute;
+    bottom:   0;
+    width: 100%;
+    left: 0px;
+  }
