@@ -8,6 +8,7 @@ import About from '../src/components/pages/About';
 import Blog from '../src/components/pages/Blog';
 import SEO from './components/pages/SEO';
 import Layout from '../src/components/pages/Layout';
+import ScrolledHome from '../src/components/pages/scrolledFooter'
 import { Switch, Route } from 'react-router-dom';
 class App extends Component {
   render() {
@@ -15,7 +16,7 @@ class App extends Component {
       <Layout>
       <div className="App">
         <Switch>
-          <Route exact path='/' component={Home}></Route>
+          <Route exact path='/' component={ScrolledHome}></Route>
           <Route path='/about' component={About}></Route>
           <Route path='/services' component={Services}></Route>
           <Route path='/mobile' component={MobileServices}></Route>

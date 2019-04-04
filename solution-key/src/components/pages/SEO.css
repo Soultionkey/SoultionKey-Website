@@ -43,10 +43,10 @@ hr.digital-spirating-line {
     
 @media screen and (max-width: 600px) {
     .digital-pricing-column {
-      width: 100%;
+      width: 80%;
       display: block;
       margin-bottom: 20px;
-      margin-left: inherit;
+      margin-left: 40px;
    }
    }
               

@@ -27,7 +27,11 @@
 }
 
 .LogoSide {
-    height: 9%;
     margin-bottom: 32px;
-    width: 20px;
+    height: 30%;
+    width:80%;
+    background-size: 80% 30%;
+    background-image: url('../../../img/logo.png');
+    background-repeat: no-repeat;
+    margin-left: 30px;
 }

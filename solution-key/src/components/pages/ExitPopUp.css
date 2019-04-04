@@ -1,0 +1,86 @@
+.ExitPopUp {
+    position: fixed;
+    width: 280px;
+    /* max-width: 70%; */
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background-color: #a7a7a7;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
+}
+.speech-bubble {
+	position: relative;
+	background: #a7a7a7;
+	border-radius: .4em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-left-color: #a7a7a7;
+	border-right: 0;
+	margin-top: 180px;
+    margin-right: -36px;
+    z-index: 200;
+}
+.exit-data-section {
+  background: #a7a7a7;
+  position: fixed;
+  width: 290px;
+  height: 250px;
+  right: 0;
+  overflow: hidden;
+  margin-right: -340px;
+  margin-top: 80px;
+  z-index: 200;
+  transition: transform 0.3s ease-out;
+  }
+ 
+
+@media (max-width: 500px) {
+    .ExitPopUp {
+        width: 100%;
+        height: 200px;
+        background: #999;
+        vertical-align: top; 
+        z-index: 300;
+    }
+    .speech-bubble:after {
+    content: '';
+	position: absolute;
+	bottom: 0;
+	left: 45%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color:  #a7a7a7;
+	border-bottom: 0;
+    margin-top: 168px;
+    z-index: 200;
+    }
+    .exit-data-section{
+        margin-right: 45px;
+        margin-top: 190px;
+        width: 250px;
+        height: 200px;
+        transition: transform 0.3s ease-out;
+    }
+}
+
+.Open {
+    transform: translateX(0);
+}
+
+.Close {
+    transform: translateX(-100%);
+}
+
+

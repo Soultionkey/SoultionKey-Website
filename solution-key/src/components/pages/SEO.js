@@ -10,7 +10,7 @@ class SEO extends Component {
             secondeCardData: [],
             thirdCardData: [],
             fourthCardData: [],
-            loading: true
+            loading: false
         };
     }
     componentDidMount() {
@@ -57,9 +57,9 @@ class SEO extends Component {
                 console.log("something goes wrong")
             });
 
-        // setTimeout(() => {
-        //     this.setState({ loading: false })
-        // }, 2000)
+        setTimeout(() => {
+            this.setState({ loading: true })
+        }, 2000)
     }
 
     render() {
@@ -79,7 +79,9 @@ class SEO extends Component {
                 </div>
                 <h1 className="pricing-text"><strong>SEO Services Pricing </strong></h1>
                 <hr className="digital-spirating-line" />
-
+                {!this.state.loading ?
+                    <Spinner />
+                    :
                     <div className="digital-pricing-row">
                         <div className="digital-pricing-column">
                             <div className="digital-pricing-card " style={{ backgroundColor: '#CD7F32' }}>
@@ -109,11 +111,11 @@ class SEO extends Component {
                             </div>
                         </div>
                     </div>
-                
-                <div id="footer"><Footer /></div>
+                }
+                    <div id="footer"><Footer /></div>
             </div>
-        );
+            );
+        }
     }
-}
-
+    
 export default SEO;

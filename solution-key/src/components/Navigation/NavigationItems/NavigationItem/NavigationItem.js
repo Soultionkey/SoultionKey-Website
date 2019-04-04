@@ -8,6 +8,7 @@ const navigationItem = ( props ) => (
             style={{textDecoration:'none'}}
             to={props.link}
             exact={props.exact}
+            onFocus={props.click}
             activeClassName="active">{props.children}</NavLink>
     </li>
 );

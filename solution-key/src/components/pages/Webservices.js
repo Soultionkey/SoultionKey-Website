@@ -10,7 +10,7 @@ class Webservices extends Component {
             secondeCardData: [],
             thirdCardData: [],
             fourthCardData: [],
-            loading: true
+            loading: false
         };
     }
     componentDidMount() {
@@ -57,9 +57,9 @@ class Webservices extends Component {
                 console.log("something goes wrong")
             });
 
-        // setTimeout(() => {
-        //     this.setState({ loading: false })
-        // }, 2000)
+        setTimeout(() => {
+            this.setState({ loading: true})
+        }, 2000)
     }
 
     render() {
@@ -79,7 +79,10 @@ class Webservices extends Component {
                 </div>
                 <h1 className="pricing-text"><strong>Web Services Pricing </strong></h1>
                 <hr className="web-spirating-line" />
-
+                   {!this.state.loading ?
+                    <Spinner />
+                    :
+                    
                     <div className="web-pricing-row">
                         <div className="web-pricing-column">
                             <div className="web-pricing-card " style={{ backgroundColor: '#CD7F32' }}>
@@ -109,7 +112,7 @@ class Webservices extends Component {
                             </div>
                         </div>
                     </div>
-                
+                }
                 <div id="footer"><Footer /></div>
             </div>
         );

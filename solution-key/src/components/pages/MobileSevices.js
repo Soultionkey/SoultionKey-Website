@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
+import Spinner from './Spinner';
 import './MobileServices.css';
 class MobileSevices extends Component {
     constructor(props) {
@@ -9,6 +10,7 @@ class MobileSevices extends Component {
             firstCardData: [],
             secondeCardData: [],
             thirdCardData: [],
+            loading:false
         };
     }
     componentDidMount() {
@@ -43,7 +45,9 @@ class MobileSevices extends Component {
             }).catch(function () {
                 console.log("something goes wrong")
             });
-
+            setTimeout(() => {
+                this.setState({ loading: true })
+            }, 2000)
     }
 
     render() {
@@ -60,7 +64,9 @@ class MobileSevices extends Component {
                 </div>
                 <h1 className="p"><strong>Mobile Services Pricing </strong></h1>
                 <hr className="mobile-spirating-line" />
-
+                {!this.state.loading ?
+                    <Spinner />
+                    :
                 <div className="rowMobile ">
                     <div className="mobile-pricing-column">
                         <div className="mobile-pricing-card"  style={{ backgroundColor: 'silver' }}>
@@ -83,6 +89,7 @@ class MobileSevices extends Component {
                         </div>
                     </div>
                 </div>
+                }
                 <div id="footer"><Footer /></div>
             </div>
         );

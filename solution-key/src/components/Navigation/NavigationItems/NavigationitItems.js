@@ -12,28 +12,32 @@ class navigationItems extends React.Component {
         event.preventDefault();
         this.setState({ open: !this.state.open });
     }
+    hideMenu = (event) => {
+        event.preventDefault();
+        this.setState({ open: false});
+    }
     render() {
         const { open } = this.state;
 
         return (
             <ul className="NavigationItems" >
-                <NavigationItem link="/about" exact >About</NavigationItem>
+                <NavigationItem link="/about" exact click={this.hideMenu} >About</NavigationItem>
                 <NavigationItem link="" >
                     <div className="dropbtn">
-                        <span onClick={this.handleClick}>Categories
+                        <span onClick={this.handleClick} style={{overflow:'0'}}>Categories
                          <i><FaAngleDown /></i>
                         </span>
                         <div className={`menu ${open ? 'open' : ''}`}>
-                            <ul>
-                                <li><Link to="/services" style={{ color: 'black', padding: '5px', textDecoration: 'none' }}>Webaite Design</Link></li>
-                                <li><Link to="/mobile" style={{ color: 'black', padding: '5px', textDecoration: 'none' }}>Mobile Application</Link></li>
-                                <li><Link to="/seo" style={{ color: 'black', padding: '5px', textDecoration: 'none' }}>SEO</Link></li>
+                            <ul >
+                                <li onClick={this.handleClick}><Link to="/services" style={{ color: 'black', padding: '5px', textDecoration: 'none' }} >Website Design</Link></li>
+                                <li onClick={this.handleClick}><Link to="/mobile" style={{ color: 'black', padding: '5px', textDecoration: 'none' }}>Mobile Application</Link></li>
+                                <li onClick={this.handleClick}><Link to="/seo" style={{ color: 'black', padding: '5px', textDecoration: 'none' }}>SEO</Link></li>
                             </ul>
                         </div>
                     </div>
                 </NavigationItem>
-                <NavigationItem link="/blog">Blog</NavigationItem>
-                <NavigationItem link="/Contact">Contact</NavigationItem>
+                <NavigationItem link="/blog" click={this.hideMenu} >Blog</NavigationItem>
+                <NavigationItem link="/Contact" click={this.hideMenu} >Contact</NavigationItem>
 
             </ul>
         );

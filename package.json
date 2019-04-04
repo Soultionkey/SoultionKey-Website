@@ -21,6 +21,7 @@
     "node-mailer": "^0.1.1",
     "node-sass": "^4.11.0",
     "react-chat-widget": "^2.1.4-1",
+    "react-datepicker": "^2.3.0",
     "react-modal-video": "^1.2.1"
   },
   "devDependencies": {
