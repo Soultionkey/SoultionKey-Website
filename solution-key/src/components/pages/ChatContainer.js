@@ -13,7 +13,8 @@ class ChatContainer extends Component {
             showChat: false,
             islogin: true,
             isOntheChat: this.props.isOntheChat,
-            userName: this.props.userName
+            userName: this.props.userName,
+            Date: this.props.Date
         }
     }
     componentDidMount() {
@@ -38,7 +39,7 @@ class ChatContainer extends Component {
                 {this.state.showChat ?
                     [
                         (this.state.isOntheChat
-                            ? <MessageForm userName={this.state.userName} />
+                            ? <MessageForm userName={this.state.userName} Date={this.state.Date}/>
                             : <LoginForm />
                         )
                     ]

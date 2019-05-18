@@ -16,7 +16,8 @@ class ChatLogin extends Component {
             isLogin: false,
             email: '',
             userName:'',
-            isOntheChat:false
+            isOntheChat:false,
+            Date:new Date()
         }
         this.handelChange = this.handelChange.bind(this);
     }
@@ -38,7 +39,7 @@ class ChatLogin extends Component {
                 {this.state.showBox ?
                 [
                     (this.state.isLogin
-                      ? <MessageForm email={this.state.email} userName={this.state.userName} />
+                      ? <MessageForm email={this.state.email} userName={this.state.userName} Date={this.state.Date}/>
                       : <div className="rcw-widget-container rcw-opened">
                       <div className="rcw-conversation-container">
                           <div className="rcw-header">

@@ -22,19 +22,24 @@ class navigationItems extends React.Component {
         return (
             <ul className="NavigationItems" >
                 <NavigationItem link="/about" exact click={this.hideMenu} >About</NavigationItem>
+                <NavigationItem link="/clients" click={this.hideMenu} >Clients</NavigationItem>
+
                 <NavigationItem link="" >
-                    <div className="dropbtn">
-                        <span onClick={this.handleClick} style={{overflow:'0'}}>Categories
+                <Link to="/web">web</Link>
+                  {/*   <div className="dropbtn">
+                        <span onClick={this.handleClick} style={{overflow:'0'}}>Services
                          <i><FaAngleDown /></i>
                         </span>
                         <div className={`menu ${open ? 'open' : ''}`}>
                             <ul >
-                                <li onClick={this.handleClick}><Link to="/services" style={{ color: 'black', padding: '5px', textDecoration: 'none' }} >Website Design</Link></li>
+                                <li onClick={this.handleClick}><Link to="/web" style={{ color: 'black', padding: '5px', textDecoration: 'none' }} >Website Design</Link></li>
                                 <li onClick={this.handleClick}><Link to="/mobile" style={{ color: 'black', padding: '5px', textDecoration: 'none' }}>Mobile Application</Link></li>
-                                <li onClick={this.handleClick}><Link to="/seo" style={{ color: 'black', padding: '5px', textDecoration: 'none' }}>SEO</Link></li>
+                                <li onClick={this.handleClick}><Link to="/seo" style={{ color: 'black', padding: '5px', textDecoration: 'none' }}>Digital Marketing</Link></li>
+                                <li onClick={this.handleClick}><Link to="/ecommerce" style={{ color: 'black', padding: '5px', textDecoration: 'none' }}>E-Commerce</Link></li>
+
                             </ul>
                         </div>
-                    </div>
+                    </div> */}
                 </NavigationItem>
                 <NavigationItem link="/blog" click={this.hideMenu} >Blog</NavigationItem>
                 <NavigationItem link="/Contact" click={this.hideMenu} >Contact</NavigationItem>

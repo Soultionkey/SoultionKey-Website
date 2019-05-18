@@ -1,0 +1,24 @@
+.Logo {
+    background-color: white;
+    padding: 1px;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-left: 30px;
+    background-image: url('../../img/Black_logo_-_no_background.png');
+    width:150px;
+    background-size: 150px 100%;
+}
+
+.Logo img {
+    height: 100%;
+}
+@media (max-width:600px){
+    .Logo{
+        background-image: url('../../img/Black_logo_-_no_background.png');
+        height: 100%;
+        width:138px;
+        background-size: 138px 100%;
+        margin-right: -15px
+    }
+}

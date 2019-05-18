@@ -15,6 +15,7 @@ class ChatLogin extends Component {
             text: '',
             email: this.props.email,
             userName: this.props.userName,
+            Date: this.props.Date,
             i: 0,
             message: [],
             isOntheChat: true
@@ -44,7 +45,8 @@ class ChatLogin extends Component {
             this.messageRef
                 .push({
                     text: this.state.text,
-                    userName: this.state.userName 
+                    userName: this.state.userName ,
+                    userDate:new Date().toString()
                 })
             this.setState({ text: ' ' })
         }
@@ -90,7 +92,7 @@ class ChatLogin extends Component {
                                 <div id="messages" className="rcw-messages-container">
                                     <div id="messages"style={{marginBottom:'-180px'}}>
                                         {this.state.message.map((message,i) =>
-                                            <Message key={i} message={message.text}  userName={this.state.userName} />
+                                            <Message key={i} message={message.text}  userName={this.state.userName} Date={this.state.Date} />
                                         )}
                                         <div id="theDiv"></div>
                                     </div>
@@ -119,7 +121,7 @@ class ChatLogin extends Component {
                         </div>
                     </div>
                     :
-                    <ChatContainer isOntheChat={this.state.isOntheChat} userName={this.state.userName} />
+                    <ChatContainer isOntheChat={this.state.isOntheChat} userName={this.state.userName} Date={this.state.Date}/>
                 }
             </div>
         );

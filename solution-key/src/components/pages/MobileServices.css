@@ -1,3 +1,84 @@
+#bg-mobile-hero {
+  background-image: url('../../img/Mobile-AppDev-Hero-GIF.gif');
+  width: 100%;
+  height: 500px; 
+  background-size: 100% 500px;
+  background-repeat: no-repeat;
+  position: relative;  
+  -webkit-align-items: center;
+  display: flex;
+  align-items: center;
+}
+.div-test{
+  background-color: white;
+  width: 100%;
+  height: 56px; 
+ }
+#bg-mobile-hero:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.1);
+  z-index: 10;
+  }
+  #bg-mobile-hero> * {
+  position:relative;
+  z-index: 200;
+  }
+.mobile-overlay-div {
+  width: 100%;
+  height: 200px; 
+  color:white;
+  font-size: 3vw;
+  line-height: 1.08365;
+  font-weight: 600;
+  letter-spacing: -.003em;
+  font-family: 'Abel', sans-serif;
+  text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+  margin-top: -150px;
+  margin-left: 50px;
+  overflow-y: hidden; 
+  overflow-x: hidden; 
+}
+.mobile-bg-button {
+  width: 100%;
+  min-width: 300px;  
+  max-width: 250px;
+  margin-left: -360px ;
+  margin-top:50px
+ }
+ .mobile-bg-button {
+  width: 100%;
+  min-width: 300px;  
+  max-width: 250px;
+  margin-left: -360px ;
+  margin-top:50px
+ }
+.mobile-playIcon {
+  width: 12%;
+  height: 17%;
+  margin-top: 250px;
+  margin-left: -240px;
+  cursor: pointer;
+}
+.mobile-bg-button-text {
+  font-size: 18px;
+}   
+.mobile-home-serperator {
+  background: #f9f9f9;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  height: 1300px;
+  }
+.mobile-home-section {
+  background-color: #fff;
+  height: 1200px;
+  margin: 2.08333%;
+  }
 .p{
   margin-top: 40px;
   font-family: 'Times New Roman', Times, serif;  
@@ -43,12 +124,47 @@ hr.mobile-spirating-line {
   }
             
 @media screen and (max-width: 600px) {
+
   .mobile-pricing-column {
   width: 80%;
   display: block;
   margin-bottom: 20px;
   margin-left: 40px;
   }
+  .mobile-home-section {
+    background-color: #fff;
+    height: 2600px;
+    margin: 2.08333%;
+  }
+  .mobile-home-serperator {
+    background: #f9f9f9;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    height: 2700px;
+    }
+    .mobile-overlay-div {
+      font-size: 30px;
+      margin-bottom:40px;
+      margin-left:80px;
+      word-wrap: break-word;
+      z-index: 2;
+    }
+    .mobile-bg-button {
+      width: 100%;
+      min-width: 300px;  
+      max-width: 250px;
+      margin-left: -340px ;
+      margin-top:10px
+     }
+    
+    .mobile-playIcon {
+      width: 12%;
+      height: 17%;
+      margin-top: 200px;
+      margin-left: -200px;
+      cursor: pointer;
+    }
   }
 .mobile-pricing-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

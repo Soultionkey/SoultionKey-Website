@@ -1,11 +1,11 @@
 .Logo {
-    background-color: white;
+    background-color: rgba(0,0,0,0.001);
     padding: 1px;
     height: 100%;
     box-sizing: border-box;
     border-radius: 5px;
     margin-left: 30px;
-    background-image: url('../../img/logo.png');
+    background-image: url('../../img/Black_logo_-_no_background.png');
     width:150px;
     background-size: 150px 100%;
 }
@@ -15,7 +15,7 @@
 }
 @media (max-width:600px){
     .Logo{
-        background-image: url('../../img/logo.png');
+        background-image: url('../../img/Black_logo_-_no_background.png');
         height: 100%;
         width:138px;
         background-size: 138px 100%;

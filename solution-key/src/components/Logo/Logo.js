@@ -6,9 +6,6 @@ import mobileLogo from '../../img/logo-mob.png';
 const logo = (props) => (
     <Link to="/"  >
     <div className="Logo" >
-       
-           
-       
     </div>
     </Link>
 );
