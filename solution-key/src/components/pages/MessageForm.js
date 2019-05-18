@@ -46,7 +46,7 @@ class ChatLogin extends Component {
                 .push({
                     text: this.state.text,
                     userName: this.state.userName ,
-                    userDate:new Date().toString()
+                    userDate:new Date().toString().substring(0,10) +" "+ new Date().getHours().toString() + ":"+ new Date().getMinutes().toString()
                 })
             this.setState({ text: ' ' })
         }
