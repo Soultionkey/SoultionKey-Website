@@ -48,8 +48,12 @@ class ChatLogin extends Component {
                     userName: this.state.userName ,
                     userDate:new Date().toString().substring(0,10) +" "+ new Date().getHours().toString() + ":"+ new Date().getMinutes().toString()
                 })
+
+                firebase.database().ref('notifications/').update({
+                    [ this.state.userName ]:1
+                   });
             this.setState({ text: ' ' })
-        }
+        }  
     }
     handleKeyPress(event) {
         if (event.key !== 'Enter') return;
